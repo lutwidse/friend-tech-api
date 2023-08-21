@@ -14,7 +14,7 @@ Maybe We will be Arkham'd up.
 
 ## 3. Problem
 
-You can check the latest registered users to buy tokens ASPA, so basically, this platform is now almost f\*\*\*ed by a bot.
+You can check the latest registered users to buy tokens ASAP, so basically, this platform is now almost f\*\*\*ed by a bot.
 
 ## 4. Fun Facts
 
