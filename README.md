@@ -9,8 +9,8 @@ Maybe We will be Arkham'd up.
 
 ## 2. Vulnerabilities
 
-1. In verification, rate limits are poorly implemented in SMS authentication thus bypass is possible.
-2. You can redeem the invite code as much as you want to deplete since there is no flag.
+1. Rate limits are poorly implemented in SMS authentication thus bypass is possible.
+2. Invite codes are redeemable as much as you want to deplete since there is no flag.
 
 ## 3. Problem
 
