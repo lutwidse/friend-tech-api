@@ -18,3 +18,8 @@ Maybe We will be Arkham'd up.
 2. All endpoint is from kosetto.com which is a dead NFT project.
 3. You can check the latest registered users to buy tokens ASPA, so basically, this platform is now almost f\*\*\*ed by a bot.
 4. 08/20/2023 (JTC). All Japanese international phone numbers are temporarily blacklisted because of me.
+5. Now [all public users information is exposed](https://gist.github.com/banteg/76d141fea2e658e5d2854944342f2d3d) by [banteg](https://twitter.com/bantg/status/1693547023977382277)
+
+## 4. My Opinions
+
+https://twitter.com/lutwidse_miceon/status/1693338817095483729
