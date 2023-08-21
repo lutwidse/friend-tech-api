@@ -12,14 +12,17 @@ Maybe We will be Arkham'd up.
 1. In verification, rate limits are poorly implemented in SMS authentication thus bypass is possible.
 2. You can redeem the invite code as much as you want to deplete since there is no flag.
 
-## 3. Fun Facts
+## 3. Problem
+
+You can check the latest registered users to buy tokens ASPA, so basically, this platform is now almost f\*\*\*ed by a bot.
+
+## 4. Fun Facts
 
 1. You don't have to deposit for debugging since all validation is client-side.
 2. All endpoint is from kosetto.com which is a dead NFT project.
-3. You can check the latest registered users to buy tokens ASPA, so basically, this platform is now almost f\*\*\*ed by a bot.
-4. 08/20/2023 (JTC). All Japanese international phone numbers are temporarily blacklisted because of me.
-5. Now [all public users information is exposed](https://gist.github.com/banteg/76d141fea2e658e5d2854944342f2d3d) by [banteg](https://twitter.com/bantg/status/1693547023977382277)
+3. 08/20/2023 (JTC). All Japanese international phone numbers are temporarily blacklisted because of me.
+4. Now [all public users information is exposed](https://gist.github.com/banteg/76d141fea2e658e5d2854944342f2d3d) by [banteg](https://twitter.com/bantg/status/1693547023977382277)
 
-## 4. My Opinions
+## 5. My Opinions
 
 https://twitter.com/lutwidse_miceon/status/1693338817095483729
