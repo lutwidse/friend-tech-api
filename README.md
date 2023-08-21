@@ -17,3 +17,4 @@ Maybe We will be Arkham'd up.
 1. You don't have to deposit for debugging since all validation is client-side.
 2. All endpoint is from kosetto.com which is a dead NFT project.
 3. You can check the latest registered users to buy tokens ASPA, so basically, this platform is now almost f\*\*\*ed by a bot.
+4. 08/20/2023 (JTC). All Japanese international phone numbers are temporarily blacklisted because of me.
