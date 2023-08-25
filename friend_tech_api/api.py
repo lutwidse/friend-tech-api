@@ -18,14 +18,14 @@ class APIBase:
             'Referer': 'https://www.friend.tech/',
             'Accept-Language': 'ja,en-US;q=0.9,en;q=0.8',
         }
-        self.session = AsyncClient(headers=self.headers)
+        self._session = AsyncClient(headers=self.headers)
 
     async def get(self, endpoint: str):
-        response = await self.session.get(API + endpoint)
+        response = await self._session.get("https://" + API + endpoint)
         return response.json()
 
     async def post(self, endpoint: str, json=None):
-        response = await self.session.post(API + endpoint, json=json)
+        response = await self._session.post("https://" + API + endpoint, json=json)
         return response.json()
 
 
