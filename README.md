@@ -11,6 +11,7 @@ Maybe We will be Arkham'd up.
 
 1. Rate limits are poorly implemented in SMS authentication thus bypass is possible.
 2. Invite codes are redeemable as much as you want to deplete since there is no flag.
+3. "Who" sent a message to the group is retrievable.
 
 ## 3. Problem
 

@@ -21,11 +21,11 @@ class APIBase:
         self.session = AsyncClient(headers=self.headers)
 
     async def get(self, endpoint: str):
-        response = await self.session.get(endpoint)
+        response = await self.session.get(API + endpoint)
         return response.json()
 
     async def post(self, endpoint: str, json=None):
-        response = await self.session.post(endpoint, json=json)
+        response = await self.session.post(API + endpoint, json=json)
         return response.json()
 
 
@@ -33,28 +33,69 @@ class NonRest:
     def __init__(self, api_base: APIBase):
         self.api_base = api_base
 
+    async def access_token(self, code, state):
+        return await self.api_base.post(f"/twitter/oauth/access_token", json={"code": code, "state": state})
+
+    # Vulnerable
     async def used_code(self, code):
-        return await self.api_base.post(f"{API}/used-code", json={"code": code})
+        return await self.api_base.post(f"/used-code", json={"code": code})
+
+    async def gating_state(self, address):
+        return await self.api_base.get(f"/gating-state/{address}")
 
     async def holding_activity(self, address):
-        return await self.api_base.get(f"{API}/holdings-activity/{address}")
+        return await self.api_base.get(f"/holdings-activity/{address}")
 
     async def friends_activity(self, address):
-        return await self.api_base.get(f"{API}/friends-activity/{address}")
+        return await self.api_base.get(f"/friends-activity/{address}")
 
+    # Vulnerable
     async def notifications_chatrooms(self, address):
-        return await self.api_base.get(f"{API}/notifications/chatRooms/{address}")
+        return await self.api_base.get(f"/notifications/chatRooms/{address}")
 
     async def search_users(self, username):
-        return await self.api_base.get(f"{API}/search/users?={username}")
+        return await self.api_base.get(f"/search/users?={username}")
+
+    # Your keys
+    async def holdings_activity(self, address):
+        return await self.api_base.get(f"/holdings-activity/{address}")
+
+    # Friends
+    async def friends_activity(self, address):
+        return await self.api_base.get(f"/friends-activity/{address}")
+
+    # Global
+    async def global_activity(self):
+        return await self.api_base.get(f"/global-activity")
 
 
 class Users:
     def __init__(self, api_base: APIBase):
         self.api_base = api_base
+        self.token = self._Token(self.api_base)
 
     async def users(self, address):
-        return await self.api_base.get(f"{API}/users/{address}")
+        return await self.api_base.get(f"/users/{address}")
 
     async def by_id(self, index):
-        return await self.api_base.get(f"{API}/users/by-id/{index}")
+        return await self.api_base.get(f"/users/by-id/{index}")
+
+    # Traders
+    async def token_holdings(self, address):
+        return await self.api_base.get(f"/users/{address}/token-holdings")
+
+    # Activity
+    async def trade_activity(self, address):
+        return await self.api_base.get(f"/users/{address}/trade-activity")
+
+    class _Token:
+        def __init__(self, api_base: APIBase):
+            self.api_base = api_base
+
+        # Holders
+        async def holders(self, address):
+            return await self.api_base.get(f"/users/{address}/token/holders")
+
+        # Holding
+        async def trade_activity(self, address):
+            return await self.api_base.get(f"/users/{address}/token/trade-activity")
