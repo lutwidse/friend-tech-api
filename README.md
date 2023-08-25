@@ -12,7 +12,7 @@ Maybe we will be Arkham'd up.
 1. The implementation of rate limits in SMS authentication is inadequate, allowing for possible bypasses.
 2. Invite codes can be redeemed an unlimited number of times without any restrictions, leading to depletion.
 3. All user information can be accessed. (Actually, it's the ~~worst~~ specification but it's more convenient to explain it like this for the next explanation.)
-4. Information regarding the senders of messages to a group can be retrieved.
+4. Information regarding the senders of messages to a group can be retrieved in real time due to a lack of authentication.
 5. The paths of images uploaded by users can be predicted by chaining the aforementioned vulnerabilities.
    - Vuln #3, gather user names and addresses.
    - Vuln #4, wait for a user to send a message to the group.
