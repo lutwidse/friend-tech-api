@@ -4,18 +4,23 @@ Registration or Authentication is not implemented ATM.
 
 ## 1. How They Made
 
-The backend seems made by Privy but only in the phone verification they're using it as a wrapper.  
-Maybe We will be Arkham'd up.
+The backend appears to be constructed by Privy except SMS verification.  
+Maybe we will be Arkham'd up.
 
 ## 2. Vulnerabilities
 
-1. Rate limits are poorly implemented in SMS authentication thus bypass is possible.
-2. Invite codes are redeemable as much as you want to deplete since there is no flag.
-3. "Who" sent a message to the group is retrievable.
+1. The implementation of rate limits in SMS authentication is inadequate, allowing for possible bypasses.
+2. Invite codes can be redeemed an unlimited number of times without any restrictions, leading to depletion.
+3. All user information can be accessed. (Actually, it's the ~~worst~~ specification but it's more convenient to explain it like this for the next explanation.)
+4. Information regarding the senders of messages to a group can be retrieved.
+5. The paths of images uploaded by users can be predicted by chaining the aforementioned vulnerabilities.
+   - Vuln #3, gather user names and addresses.
+   - Vuln #4, wait for a user to send a message to the group.
+     - Check the current time. The end of the image path comprises the Unix Timestamp in milliseconds.
 
 ## 3. Problem
 
-You can check the latest registered users to buy tokens ASAP, so basically, this platform is now almost f\*\*\*ed by a bot.
+You can check the newly registered users to buy tokens ASAP, so basically, this platform is now almost f\*\*\*ed by a bot.
 
 ## 4. Fun Facts
 
