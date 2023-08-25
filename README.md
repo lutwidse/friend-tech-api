@@ -16,7 +16,9 @@ Maybe we will be Arkham'd up.
 5. The paths of images uploaded by users can be predicted by chaining the aforementioned vulnerabilities.
    - Vuln #3, gather user names and addresses.
    - Vuln #4, wait for a user to send a message to the group.
-     - Check the current time. The end of the image path comprises the Unix Timestamp in milliseconds.
+     - Check the user's address from the user name.
+     - Check the current time.
+       - The path comprises the user's address and the Unix Timestamp in milliseconds.
 
 ## 3. Problem
 
